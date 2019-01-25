@@ -1,4 +1,5 @@
 .btn{
+    &, //insto permite que seja aplicado tb a botões (forms)//
     &:link,
     &:visited{
     text-transform: uppercase;
@@ -8,10 +9,15 @@
     border-radius: 10rem;
     transition: all .2s; /*tipo de animação mais simples que o @keyframe */
     position:relative; /*por causa da atribuição de absolute no botão after */
+
+    //change for the button element(forms)//
+    border:none;
+    cursor:pointer;
     }
 
 
-    &:hover{
+    &:hover,
+    {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
@@ -21,7 +27,8 @@
         }
     }
 
-    &:active{
+    &:active,
+    &:focus {
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
